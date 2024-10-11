@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Product Listing</title>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Our Store</h1>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>At Our Store, we believe that shopping should be a delightful experience. Established in [Year], our
+                mission is to offer high-quality products that meet the diverse needs of our customers. We carefully
+                curate our selection to ensure that every item we offer reflects our commitment to quality and value.
+            </p>
+            <p>Our team is passionate about what we do, and we take pride in providing exceptional customer service. We
+                understand that our success relies on your satisfaction, and we strive to create a shopping environment
+                where you feel valued and appreciated. Whether you're looking for the latest gadgets, stylish clothing,
+                or everyday essentials, we've got you covered.</p>
+            <p>We also believe in sustainability and are committed to reducing our environmental impact. By partnering
+                with eco-friendly suppliers and using sustainable practices, we aim to make a positive difference in our
+                community and the planet.</p>
+            <p>Thank you for choosing Our Store! We look forward to serving you and helping you find exactly what you
+                need.</p>
+        </section>
+        <h2>Products</h2>
+        <div class="product">
+            <img onclick="redirectToProduct('honor-magic6.jpg', 'Description of honor-magic6.jpg', 'assets/honor-magic6.jpg', '$111.00')" src="assets/honor-magic6.jpg" alt="mobile 1" class="product-image">
+            <h3>Product 1</h3>
+            <p>Price: $10</p>
+            <a href="assets/mobile01.jpg">View Details</a>
+        </div>
+        <div class="product">
+            <img onclick="redirectToProduct('mobile1', 'Description of mobile1', 'assets/mobile02.jpg', '$229.99')" src="assets/mobile02.jpg" alt="mobile 2" class="product-image">
+            <h3>Product 2</h3>
+            <p>Price: $20</p>
+            <a href="assets/mobile03.jpg">View Details</a>
+        </div>
+    </main>
+</body>
+
+<script>
+    function redirectToProduct(name, description, imageUrl, price) {
+        localStorage.setItem('productName', name);
+        localStorage.setItem('productDescription', description);
+        localStorage.setItem('productImage', imageUrl);
+        localStorage.setItem('productPrice', price); // Store the price
+        window.location.href = './checkout.php';
+    }
+
+
+</script>
+</html>
